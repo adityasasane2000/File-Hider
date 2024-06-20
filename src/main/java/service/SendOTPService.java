@@ -24,7 +24,7 @@ public class SendOTPService {
 
             protected PasswordAuthentication getPasswordAuthentication() {
 
-                return new PasswordAuthentication(from, "your mail password");
+                return new PasswordAuthentication(from, "enter your mail password");
 
             }
 
@@ -39,7 +39,7 @@ public class SendOTPService {
 
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
-            message.setSubject("File Enc ka OTP");
+            message.setSubject("File Encryption ka OTP");
 
             message.setText("Your One time Password for File Enc app is " + genOTP);
 
